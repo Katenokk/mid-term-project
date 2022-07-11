@@ -1,0 +1,371 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*navbar style*/
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 70px auto;
+    color: #6B708D;
+    font-weight: bold;
+
+}
+
+a {
+    text-decoration: none;
+    color: #6B708D;
+}
+
+.circle {
+    background-image: url(/images/logos/circle.svg);
+    width: 60px;
+    height: 18px;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.nav-center {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.nav-center > a:hover {
+    color: #072AC8;
+}
+
+.contact {
+    text-align: center;
+    padding: 1em 3em;
+    border-radius: 0;
+    border: none;
+    background: #072AC8;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background: #292E47;
+}
+
+.acordeon {
+    display: none;
+}
+
+
+/*sección "hero"*/
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.left-div {
+    width: 530px;
+    
+}
+
+.left-div > p {
+    color:  #6B708D;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    width: 435px;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #292E47;
+}
+
+@media screen and (max-width: 991px) {
+    .nav-center, .contact {
+        display: none;
+    }
+    .main-nav {
+        position: relative;
+    }
+    
+    .acordeon {
+        display: block;
+        margin-left: 90%; /*arreglar!*/
+       
+    }
+
+    .acordeon a {
+        text-decoration: none;
+        display: block;
+    }
+
+    /*.icon::before {
+        content: url();/*solo valen urls?*/
+    
+    .drop-down {
+        position: absolute;
+        width: 100%; /*no hace nada*/
+        display: none;
+        background: rgb(190, 187, 187);
+        left: 0;
+        
+    }
+
+    .acordeon:hover .drop-down {
+        display: block;
+    }
+
+    .drop-down li {
+        display: block;
+    
+    }
+
+    .acordeon:hover li {
+        padding: 10px;
+    }
+
+   
+
+    #hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        width: 700px;
+    }
+
+    .hero-title {
+        text-align: center;
+        
+        
+    }
+
+    .left-div {
+        
+        
+        width: 700px;
+    }
+
+    .left-div > p {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 600px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .get-btn {
+        order: -1;
+    }
+
+    .main-nav {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 30px 0 30px;
+    }
+
+
+}
+
+@media screen and (max-width: 767px) {
+    .hero-title {
+        font-size: 40px;
+        width: 680px;
+    }
+
+    .left-div > p {
+        font-size: 17px;
+    }
+
+    .img-card1, .img-card2 {
+        display: none;
+    }
+}
+
+
+
+.right-div {
+    position: relative;
+}
+
+.hero-dude {
+    max-width: 570px;
+    
+}
+
+.see-btn {
+    background: none;
+    color:  #6B708D;
+    font-weight: 600;
+    padding: 1em 2em 1em 0;
+}
+
+.get-btn {
+    background: #072AC8;
+    color: #fff;
+    padding: 1em 2em;
+}
+
+.get-btn:hover {
+    background: #292E47;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 17px;
+    border: none;
+}
+
+.img-card1 {
+    position: absolute;
+    max-width: 250px; 
+    top: 10px;
+    left: -50px;
+}
+
+.img-card2 {
+    position: absolute;
+    max-width: 250px;
+    bottom: -120px;
+    right: -50px;
+}
+
+/*sección lista de logos*/
+
+.logos-section {
+    position: static;
+    margin: 100px 50px 20px; /*cambiar luego*/
+}
+
+.logos-list {
+    display: grid;
+    grid-template-areas:
+    "one two"
+    "three four";
+    grid-gap: 100px;
+    justify-content: space-around;
+    
+}
+
+
+
+
+.logos-list:nth-child(1) {
+    grid-area: one;
+}
+
+.logos-list:nth-child(2) {
+    grid-area: two;
+}
+.logos-list:nth-child(3) {
+    grid-area: three;
+}
+.logos-list:nth-child(4) {
+    grid-area: four;
+}
+.logos-list:nth-child(5) {
+    grid-area: five;
+}
+
+.amazon {
+    display: none;
+}
+
+
+/*los logos se ponen en linea a partir de 975px*/
+
+@media screen and (min-width: 975px) {
+    .logos-section {
+        width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .amazon {
+        display: block;
+    }
+
+    .logos-list {
+        grid-template-areas:  
+            "one two three four five";
+    }
+}
+
+/*sección Recent projects*/
+
+.section-recent {
+    margin: 200px auto;
+    width: 1100px;
+}
+
+.section-recent h2 {
+    font-size: 40px;
+}
+
+.recent-project-item h4 {
+    font-size: 24px;
+}
+/*hasta 745px: una columna
+de 745 a 975: 2 y 1
+mas 975: 1 fila*/
+.recent-project-item img {
+    width: 340px; /*como va el ancho???*/
+    height: 240px;
+}
+
+.recent-projects {
+    display: grid;
+    grid-template-areas: 
+        "one"
+        "two"
+        "three";
+    grid-gap: 40px;
+    
+}
+
+.recent-projects:nth-child(1) {
+    grid-area: one;
+}
+
+.recent-projects:nth-child(2) {
+    grid-area: two;
+}
+
+.recent-projects:nth-child(3) {
+    grid-area: three;
+}
+
+@media screen and (min-width: 745px) {
+    .recent-projects {
+        grid-template-areas:
+        "one two"
+        "three three";
+    }
+}
+
+@media screen and (min-width: 975px) {
+    .recent-projects {
+        grid-template-areas:
+        "one two three";
+    }
+}
+
+/*seccion tstimonial 
+
+https://uploads-ssl.webflow.com/61f7ff5634c23c5bef9d2e54/61f800d0da83d2876b6ccdba_Orbit.png
+*/

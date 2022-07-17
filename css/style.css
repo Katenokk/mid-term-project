@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: #f2f4fc;
 }
 
 /*navbar style*/
@@ -22,14 +23,10 @@ a {
     text-decoration: none;
     color: #6B708D;
 }
-
+/*repasar*/
 .circle {
-    background-image: url(/images/logos/circle.svg);
     width: 60px;
     height: 18px;
-    background-position: 50% 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -39,7 +36,6 @@ a {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-
 }
 
 .nav-links > a:hover {
@@ -64,48 +60,23 @@ a {
     display: none;
 }
 
-
-/*sección "hero"*/
-#hero {
-    display: flex;
-    gap: 30px;
-    width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-}
-
-.left-div {
-    max-width: 530px;
-    
-}
-
-.left-div > p {
-    color:  #6B708D;
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 400;
-    width: 435px;
-}
-
-.hero-title {
-    font-size: 60px;
-    font-weight: bold;
-    color: #292E47;
-}
-
+/*media query acrodeon*/
 @media (max-width: 991px) {
+
     .nav-links, .contact {
         display: none;
     }
+    
     .main-nav {
         position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 30px;
     }
     
     .acordeon {
         display: block;
-        margin-left: 90%; /*arreglar!*/
-       
+        margin-left: 90%; /*arreglar!*/ 
     }
 
     .acordeon a {
@@ -113,8 +84,6 @@ a {
         display: block;
     }
 
-    /*.icon::before {
-        content: url();/*solo valen urls?*/
     
     .drop-down {
         position: absolute;
@@ -138,126 +107,60 @@ a {
         padding: 10px;
     }
 
-    #hero {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 700px;
-    }
+} /*acaba la @media acordeon*/
+ 
 
-    .hero-title {
-        text-align: center;
-    }
+/*sección "hero"*/
 
-    .left-div {
-        width: 700px;
-    }
 
-    .left-div > p {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        width: 600px;
-    }
+/*por defecto, móvil < 760px*/
 
-    .right-div {
-        max-width: 560px;
-    }
-
-    .hero-pic {
-        width: 100%;
-    }
-
-    .hero-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-    }
-
-    .get-btn {
-        order: -1;
-    }
-
-    .main-nav {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding: 0 30px 0 30px;
-    }
-
-} /*acaba la @media <991px*/
-
-@media (max-width: 767px) {
-    
-    #hero {
-        min-width: 423px;
-    }
-
-    .left-div {
-        max-width: 560px;
-    }
-    .right-div {
-        max-width: 560px;
-    }
-
-    .hero-pic {
-        width: 100%;
-    }
-    
-    .img-card1, .img-card2 {
-        display: none;
-    }
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    padding: 100px 50px 0 50px; /*coge este para todo!!*/
 }
 
-.right-div {
-    position: relative;
-    min-width: 570px;
-} 
-
-@media (min-width:915px) and (max-width:1100px) {
-
-    .right-div {
-        position: relative;
-    }
-
-    .hero-pic {
-        width: 50%vw;
-        /*tiene que encoger!!!*/
-    }
-
-    .img-card1 {
-        position: absolute;
-        top: 5%;
-        left: -20%;
-        width: 40%;
-    }
-
-    .img-card2 {
-        position: absolute;
-        width: 40%;
-        top: 70%;
-        left: 55%;
-    }
-}
-
-
+/*no puedo centrar l hero img*/
 
 .hero-pic {
-    /*max-width: 570px;*/
-    width: 100%;
-    
+    width: 80%;
+    margin: 0 auto;
+}
+
+.img-card1, .img-card2 {
+    display: none;
+} 
+
+.left-div > p {
+    color:  #6B708D;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+ 
+.hero-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #292E47;
+    text-align: center;
 }
 
 .see-btn {
     background: none;
     color:  #6B708D;
     font-weight: 600;
-    padding: 1em 2em 1em 0;
+    padding: 1em 2em 1em 0;/*es distinto :(*/
 }
 
 .get-btn {
     background: #072AC8;
     color: #fff;
-    padding: 1em 2em;
+    /*padding: 15px 30px; segun original*/
+    padding: 1em 1.2em;
 }
 
 .get-btn:hover {
@@ -269,20 +172,130 @@ a {
     font-size: 17px;
     border: none;
 }
-
-.img-card1 {
-    position: absolute;
-    max-width: 250px; 
-    top: 10px;
-    left: -50px;
+ 
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
 }
 
-.img-card2 {
-    position: absolute;
-    max-width: 250px;
-    bottom: -120px;
-    right: -50px;
+/*query para Iphone 12*/
+
+@media (max-width: 390px) {
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .left-div > p {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+    }
 }
+
+
+/*aparecen las cards fijas, query solo para las cards*/
+
+@media (min-width: 750px) {
+    .img-card1, .img-card2 {
+        display: block;
+    }
+
+    .right-div {
+        position: relative;
+    }
+
+    .img-card1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+    }
+
+    .img-card2 {
+        position: absolute;
+        width: 150px;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+/*pantalla ancha Hero*/
+
+@media (min-width: 975px) {
+    #hero {
+        display: flex;
+        flex-direction: row;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center; /*no va, se centra solo con margin auto*/
+        align-items: center;
+        padding: 0;
+    }
+    
+    .hero-title {
+        text-align: left;
+    }
+
+    .left-div > p {
+        text-align: left;
+    }
+    .right-div {
+        position: relative;
+    }
+
+    .hero-pic {
+        width: 40vw;
+        /*tiene que encoger!!!*/
+    }
+
+    .img-card1 {
+        position: absolute;
+        top: 5%;
+        left: -20%;
+        max-width: 40%;
+    }
+
+    .img-card2 {
+        position: absolute;
+        max-width: 40%;
+        bottom: -10%;
+        right: -5%;
+    }
+
+    .get-btn {
+        order: 1;
+    }
+     
+}
+
+/*query solo para que las cards se queden fijas*/
+
+@media (min-width: 1150px) {
+    .rigth-div {
+        position: relative; /*hay que ponerlo cada vez??*/
+    }
+    .img-card1 {
+        position: absolute;
+        top: 0;
+        left: -10px;
+        max-width: 200px;
+    }
+
+    .img-card2 {
+        position: absolute;
+        max-width: 200px;
+        bottom: -10px;
+        right: -10px;
+    }
+}
+
+
 
 /*sección lista de logos*/
 
@@ -327,7 +340,7 @@ a {
     display: none;
 }
 
-/*en el original funciona así
+/*en el original funciona así ¿?¿?
 
 .logos-list {
     max-width: 1100px;
@@ -347,7 +360,6 @@ a {
 @media (min-width: 975px) {
     .logos-section {
         max-width: 1100px;
-        
     }
 
     .amazon {
@@ -365,12 +377,23 @@ a {
 
 
 
-/*Prjocets Section (recent projects)*/
+/*Projects Section (recent projects)
+
+para que crezcan hay que quitar el wrap, volver a grid con dos versiones*/
 
 .projects-section {
-    margin: 50px auto;
-    width: 1100px;
+    padding: 100px 30px 0 30px;
 }
+
+.recent-projects {
+    margin: 50px auto;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    gap: 40px;
+}
+
 
 .projects-section h2 {
     font-size: 40px;
@@ -379,15 +402,23 @@ a {
 .recent-project-item h4 {
     font-size: 24px;
 }
+
+.recent-project-item img {
+    width: 100%; /*tienen distinto ancho*/
+    object-fit: cover;
+    height: 240px;
+   
+} 
+
+
+
+
 /*hasta 745px: una columna
 de 745 a 975: 2 y 1
-mas 975: 1 fila*/
-.recent-project-item img {
-    width: 340px; /*como va el ancho???*/
-    height: 240px;
-}
+mas 975: 1 fila*     asi era con grid:/
 
-.recent-projects {
+
+/*.recent-projects {
     display: grid;
     grid-template-areas: 
         "one"
@@ -410,7 +441,7 @@ mas 975: 1 fila*/
 
 @media (min-width: 745px) {
 /*imposible poner margen derecho*/
-
+/*
     .recent-projects {
         grid-template-areas:
         "one two"
@@ -425,7 +456,7 @@ mas 975: 1 fila*/
         grid-template-areas:
         "one two three";
     }
-}
+}*/
 
 /*seccion testimonial*/
 
@@ -435,6 +466,7 @@ mas 975: 1 fila*/
     background-position: 0px 0px;
     background-color: #292e47;
     max-width: 1320px;
+    max-height: 600px; /*???*/
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -459,6 +491,7 @@ mas 975: 1 fila*/
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1em;
 }
 
 
@@ -474,8 +507,6 @@ mas 975: 1 fila*/
         /*height: 100%;*/
         height: 622px;
         position: relative; 
-        
-
     }
 
     
@@ -486,12 +517,6 @@ mas 975: 1 fila*/
         
     }
     .emoji1 {
-        /*background-image: url("images/testimonial-section/memoji-1.png");
-        background-size: contain;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        
-        imposible con BG img*/
         position: absolute;
         left: 0%;
         top: 0%;
@@ -570,4 +595,142 @@ mas 975: 1 fila*/
 .client-position {
     color: #ecf7ff;
     font-size: 13px;
+}
+
+/*Services section*/
+/* ancho de movil 1 columna*/
+
+.services-section {
+    color: #292e47;
+}
+
+.services-section > h2 {
+    margin-left: 30px;
+    font-size: 24px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    margin-top: 20px;
+    padding: 0 30px;
+    gap: 10px;
+
+}
+
+.services {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 340px;
+    padding: 5px 10px;
+}
+/*meter en un div*/
+.icon {
+    width: 40px;
+}
+
+@media (min-width: 770px) {
+    .services-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        margin-top: 70px;
+    
+    }
+}
+
+
+/*Form newsletter*/
+
+.cta-section {
+    background-color: #ffc600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    margin-top: 60px;
+    padding: 0 30px;
+}
+
+.cta-section > h1 {
+    font-size: 30px;
+}
+
+.cta-section > p {
+    font-size: 17px;
+}
+
+.cta-section > form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.input {
+    height: 80px;
+    padding: 8px 0 8px 70px;
+    color: #292e47;
+}
+
+.btn-subscribe {
+    height: 80px; /*hay que poner altura??*/
+    font-size: 17px;
+    padding: 1em 2em;
+    background-color: #072ac8;
+    color: #fff;
+    border: none;
+}
+
+.mail-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 8%;
+    top: 27%;
+}
+
+.input-container {
+    position: relative;
+}
+
+@media (min-width: 767px) {
+    .cta-section > h1 {
+        font-size: 40px;
+    }
+
+    .cta-section > form {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        /*width: 600px; en el original es absoluto*/
+    }
+
+
+}
+
+
+/*footer*/
+
+.circle-footer {
+    width: 100px;
+    margin: 0 auto; /*no se centra*/
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.address > p {
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }

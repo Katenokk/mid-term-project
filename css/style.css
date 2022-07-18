@@ -76,7 +76,7 @@ a {
     
     .acordeon {
         display: block;
-        margin-left: 90%; /*arreglar!*/ 
+        margin-right: -90%;  
     }
 
     .acordeon a {
@@ -120,14 +120,12 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 3em;
-    padding: 100px 50px 0 50px; /*coge este para todo!!*/
+    padding: 0 30px; /*coge este para todo!!*/
 }
 
-/*no puedo centrar l hero img*/
-
 .hero-pic {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 560px;
 }
 
 .img-card1, .img-card2 {
@@ -153,14 +151,14 @@ a {
     background: none;
     color:  #6B708D;
     font-weight: 600;
-    padding: 1em 2em 1em 0;/*es distinto :(*/
+    padding: 15px 30px;/*es distinto :(*/
 }
 
 .get-btn {
     background: #072AC8;
     color: #fff;
-    /*padding: 15px 30px; segun original*/
-    padding: 1em 1.2em;
+    padding: 15px 30px; /*segun original*/
+    /*padding: 1em 1.2em;*/
 }
 
 .get-btn:hover {
@@ -176,10 +174,12 @@ a {
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 2em;
+    gap: 1em;
 }
 
 /*query para Iphone 12*/
+
+
 
 @media (max-width: 390px) {
 
@@ -194,6 +194,7 @@ a {
     .hero-buttons {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -302,6 +303,8 @@ a {
 /*los logos se ponen en linea a partir de 975px* falta poner un ancho mínimo*/
 
 
+
+
 .logos-list {
     display: grid;
     grid-template-areas:
@@ -315,7 +318,7 @@ a {
 
 /*hay que poner un ancho fijo de 150px a cada logo*/
 .logos-list > * {
-    width: 150px;
+    width: 120px;
     height: 96px;
 }
 
@@ -353,7 +356,8 @@ a {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 130px;
+    margin-top: 80px;
+    padding: 0 30px;
 }
 
 
@@ -382,7 +386,7 @@ a {
 para que crezcan hay que quitar el wrap, volver a grid con dos versiones*/
 
 .projects-section {
-    padding: 100px 30px 0 30px;
+    padding: 30px 30px 0 30px;
 }
 
 .recent-projects {
@@ -394,20 +398,34 @@ para que crezcan hay que quitar el wrap, volver a grid con dos versiones*/
     gap: 40px;
 }
 
-
+.recent-project-item {
+    background-color: #fff;
+}
 .projects-section h2 {
-    font-size: 40px;
+    font-size: 30px;
+    text-align: center;
 }
 
+.project-item-content {
+    margin: 30px 30px 20px 30px;
+}
 .recent-project-item h4 {
     font-size: 24px;
 }
 
+.recent-project-item a {
+    color: #072ac8;
+    display: block;
+    margin: 30px 0;
+    font-size: 17px;
+}
+.recent-project-item a:hover {
+    cursor: pointer;
+}
 .recent-project-item img {
     width: 100%; /*tienen distinto ancho*/
     object-fit: cover;
     height: 240px;
-   
 } 
 
 
@@ -466,11 +484,11 @@ mas 975: 1 fila*     asi era con grid:/
     background-position: 0px 0px;
     background-color: #292e47;
     max-width: 1320px;
-    max-height: 600px; /*???*/
+    height: 450px; /*???*/
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    
+    padding: 0 30px;
 }
 
 
@@ -484,7 +502,9 @@ mas 975: 1 fila*     asi era con grid:/
 }
 
 .client > img {
-    width: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .client {
@@ -504,7 +524,7 @@ mas 975: 1 fila*     asi era con grid:/
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        /*height: 100%;*/
+        height: 100%;
         height: 622px;
         position: relative; 
     }
@@ -564,20 +584,24 @@ mas 975: 1 fila*     asi era con grid:/
     }
 }
 
-.content {
+.testimonial-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 5em;
+    justify-content: space-around;
+    
 }
-.container-testimonial > * {
+.container-testimonial h3, p {
     text-align: center;
+}
+
+.client-info p {
+    text-align: left;
 }
 
 .container-testimonial h3 {
     color: #ecf7ff;
     line-height: 150%;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -585,17 +609,22 @@ mas 975: 1 fila*     asi era con grid:/
     color: #ffc600;
     font-size: 24px;
     line-height: 160%;
+    font-weight: 500;
 }
 
 .client-name {
     color: #a2d6f9;
     font-size: 17px;
+    margin-bottom: 0;
 }
 
 .client-position {
     color: #ecf7ff;
     font-size: 13px;
+    margin-top: 0;
 }
+
+
 
 /*Services section*/
 /* ancho de movil 1 columna*/
@@ -605,8 +634,9 @@ mas 975: 1 fila*     asi era con grid:/
 }
 
 .services-section > h2 {
-    margin-left: 30px;
-    font-size: 24px;
+    margin: 20px 0 10px 0;
+    font-size: 30px;
+    text-align: center;
 }
 
 .services-container {
@@ -625,13 +655,35 @@ mas 975: 1 fila*     asi era con grid:/
     flex-direction: column;
     justify-content: space-between;
     max-width: 340px;
-    padding: 5px 10px;
-}
-/*meter en un div*/
-.icon {
-    width: 40px;
+  
+  
 }
 
+.icon {
+    width: 80px;
+    background-color: #ecf7ff;
+    border-radius: 50%;
+    margin: 40px 0 0  40px;
+    object-fit: scale-down;
+}
+
+.services h4 {
+    margin: 30px 30px 20px;
+    font-size: 24px;
+}
+
+.services p {
+    text-align: left;
+    margin: 0 30px 10px;
+    font-size: 17px;
+}
+
+.services a {
+    font-size: 17px;
+    margin: 30px;
+    color: #072ac8;
+    font-weight: 500px; /*no lo coge!!!*/
+}
 @media (min-width: 770px) {
     .services-container {
         display: grid;
@@ -639,6 +691,18 @@ mas 975: 1 fila*     asi era con grid:/
         grid-template-rows: auto;
         margin-top: 70px;
     
+    }
+
+    .services-section {
+        max-width: 1100px;
+        margin: 0 auto;
+        /*arreglar padding*/
+    }
+
+    .services-section > h2 {
+        margin: 20px 0 10px 0;
+        font-size: 40px;
+        text-align: left;
     }
 }
 
@@ -649,7 +713,7 @@ mas 975: 1 fila*     asi era con grid:/
     background-color: #ffc600;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 500px;
     margin-top: 60px;
@@ -673,6 +737,9 @@ mas 975: 1 fila*     asi era con grid:/
     height: 80px;
     padding: 8px 0 8px 70px;
     color: #292e47;
+    font-size: 17px;
+    max-width: 100%; /*no se hace mas estrecho*/
+    width: 100%;
 }
 
 .btn-subscribe {
@@ -714,23 +781,45 @@ mas 975: 1 fila*     asi era con grid:/
 
 /*footer*/
 
-.circle-footer {
+.circle-footer img {
     width: 100px;
-    margin: 0 auto; /*no se centra*/
+    height: 30px;
+    margin-bottom: 30px;
+    margin-left: auto; /*no se centra*/
+    margin-right: auto;
+    
 }
 
 footer {
     display: flex;
     flex-direction: column;
     align-items: center; 
+    margin-top: 60px;
+    padding: 0 30px 100px 30px;
 }
 
 .address > p {
     text-align: center;
+    margin: 0;
+    color: #6B708D;
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    margin-top: 20px;
+}
+
+.links a {
+    color: #072ac8;
+}
+
+@media (min-width: 770px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

@@ -76,7 +76,7 @@ a {
     
     .acordeon {
         display: block;
-        margin-right: -90%;  
+        margin-right: -75%;  
     }
 
     .acordeon a {
@@ -400,6 +400,7 @@ para que crezcan hay que quitar el wrap, volver a grid con dos versiones*/
 
 .recent-project-item {
     background-color: #fff;
+    min-width: 330px;
 }
 .projects-section h2 {
     font-size: 30px;
@@ -427,6 +428,22 @@ para que crezcan hay que quitar el wrap, volver a grid con dos versiones*/
     object-fit: cover;
     height: 240px;
 } 
+
+@media (min-width:760px) {
+    .recent-project-item img {
+        max-width: 100%;
+        object-fit: cover;
+        height: 240px;
+    } 
+
+    .recent-project-item {
+        max-width: 340px;
+    }
+    .projects-section h2 {
+        font-size: 40px;
+        text-align: left;
+    }
+}
 
 
 
@@ -475,6 +492,9 @@ mas 975: 1 fila*     asi era con grid:/
         "one two three";
     }
 }*/
+
+
+
 
 /*seccion testimonial*/
 
@@ -590,7 +610,7 @@ mas 975: 1 fila*     asi era con grid:/
     justify-content: space-around;
     
 }
-.container-testimonial h3, p {
+.testimonial-title, .testimonial-text {
     text-align: center;
 }
 
@@ -726,6 +746,7 @@ mas 975: 1 fila*     asi era con grid:/
 
 .cta-section > p {
     font-size: 17px;
+    color: #6b708d;
 }
 
 .cta-section > form {
@@ -774,14 +795,20 @@ mas 975: 1 fila*     asi era con grid:/
         gap: 8px;
         /*width: 600px; en el original es absoluto*/
     }
+}
 
-
+@media (min-width: 990px) {
+    .cta-section {
+        max-width: 1260px;
+        padding: 0 30px 0 30px;
+        margin: 200px auto 0 auto;
+    }
 }
 
 
 /*footer*/
 
-.circle-footer img {
+.circle-footer > img {
     width: 100px;
     height: 30px;
     margin-bottom: 30px;
@@ -821,5 +848,22 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-top: 200px;
+        max-width: 1100px;
+        margin: 200px auto 0 auto;
     }
+
+    .address > p {
+        text-align: left;
+    }
+}
+
+/*project.html styles*/
+
+.project-img {
+    width: 100%;
+}
+
+.project {
+    padding: 0 30px;
 }

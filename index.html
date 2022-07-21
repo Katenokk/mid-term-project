@@ -26,7 +26,7 @@
                 <div class="menu">
                     <ul class="drop-down">
                         <li>
-                            <a href="#">Home</a> 
+                            <a href=".index.html">Home</a> 
                         </li>
                         <li>
                             <a href="#">Projects</a>
@@ -38,7 +38,8 @@
                 </div>     
             </div>
             <div>
-                <button class="contact">Contact Us</button>
+                <a class="contact" href="form.html">Contact Us</a> 
+                <!--<button class="contact">Contact Us</button>-->
             </div>
         </nav>
     </header>
@@ -158,14 +159,15 @@
     <section class="cta-section">
         <h1>Do you have any questions?</h1>
         <p>Let us help you!</p>
-        <form action="">
+        <div class="alert"></div>
+        <div class="form">
             <div class="input-container">
                 <label for="newsletter"></label>
                 <img class="mail-icon" src="images/newsletter/mail.svg" alt="mail icon">
-                <input class="input" id="newsletter" type="text" placeholder="Enter your email">
+                <input class="input" id="newsletter" type="email" placeholder="Enter your email">
             </div>
             <button class="btn-subscribe"  type="submit">Suscribe</button>
-        </form>
+        </div>
     </section>
     <footer>
         <div class="address">

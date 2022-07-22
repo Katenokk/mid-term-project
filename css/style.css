@@ -506,7 +506,7 @@ mas 975: 1 fila*     asi era con grid:/
 /*seccion testimonial*/
 
 .container-testimonial {
-    background-image: url("images/testimonial-section/BG.png");
+    background-image: url("https://uploads-ssl.webflow.com/61f7ff5634c23c5bef9d2e54/61f800d0da83d2876b6ccdba_Orbit.png");
     background-size: contain;
     background-position: 0px 0px;
     background-color: #292e47;
@@ -516,6 +516,8 @@ mas 975: 1 fila*     asi era con grid:/
     margin-right: auto;
     position: relative;
     padding: 0 30px;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -541,21 +543,33 @@ mas 975: 1 fila*     asi era con grid:/
     gap: 1em;
 }
 
+.testimonial-title {
+    font-size: 30px;
+}
 
 
 
 @media (min-width: 700px) {
+    .testimonial-section {
+        margin: 200px auto 0 auto;
+    }
     .container-testimonial {
-        /*quitar flex?*/
+        /*solo tiene un elemento*/
         display: flex;
-        flex-direction: column;
+        /*flex-direction: column;*/
         justify-content: space-around;
-        align-items: center;
-        height: 100%;
+        /*align-items: center;*/
+        /*height: 100%;*/
         height: 622px;
         position: relative; 
     }
+    .testimonial-text {
+        max-width: 560px;
+    }
 
+    .testimonial-title {
+        font-size: 40px;
+    }
     
     .emoji {
         display: block;
@@ -628,7 +642,7 @@ mas 975: 1 fila*     asi era con grid:/
 .container-testimonial h3 {
     color: #ecf7ff;
     line-height: 150%;
-    font-size: 30px;
+    
     font-weight: bold;
 }
 
@@ -658,6 +672,7 @@ mas 975: 1 fila*     asi era con grid:/
 
 .services-section {
     color: #292e47;
+    margin-top: 40px;
 }
 
 .services-section > h2 {
@@ -723,7 +738,7 @@ mas 975: 1 fila*     asi era con grid:/
 
     .services-section {
         max-width: 1100px;
-        margin: 0 auto;
+        margin: 120px auto 0;
         /*arreglar padding*/
     }
 
@@ -733,6 +748,7 @@ mas 975: 1 fila*     asi era con grid:/
         font-size: 40px;
         text-align: left;
     }
+   
 }
 
 
@@ -742,11 +758,11 @@ mas 975: 1 fila*     asi era con grid:/
     background-color: #ffc600;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 500px;
     margin-top: 60px;
-    padding: 0 30px;
+    padding: 30px 30px;
 }
 
 .cta-section > h1 {
@@ -761,27 +777,36 @@ mas 975: 1 fila*     asi era con grid:/
 .form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 15px;
+    max-width: 243px;
 }
 .input {
     height: 80px;
     padding: 8px 0 8px 70px;
-    color: #292e47;
     font-size: 17px;
     /*max-width: 100%; no se hace mas estrecho*/
     width: 100%;
+    background-color: #ecf7ff;
+    border: 1px solid #cccccc;
+}
+
+.input::placeholder {
+    color: #292e47;
 }
 
 .btn-subscribe {
-    height: 80px; /*hay que poner altura??*/
+    height: 80px;
     font-size: 17px;
     padding: 1em 2em;
     background-color: #072ac8;
     color: #fff;
     border: none;
-    width: 30%;
 }
 
+.btn-subscribe:hover {
+    background-color: #292e47;
+    cursor: pointer;
+}
 .mail-icon {
     width: 30px;
     height: 30px;
@@ -808,16 +833,30 @@ mas 975: 1 fila*     asi era con grid:/
         gap: 8px;
         min-width: 600px; 
     }
+    .input-container {
+        width: 66%; 
+    }
+    
    
 }
+/*meter dentro de la optra*/
 
 @media (min-width: 990px) {
     .cta-section {
-        max-width: 1260px;
-        padding: 0 30px 0 30px;
+        max-width: 1320px;
+        padding: 90px 30px;
         margin: 200px auto 0 auto;
     }
+    .input-container {
+        width: 66%; 
+    }
+
+    .btn-subscribe {
+        width: 30%;
+    }
+   
 }
+
 
 
 /*footer*/
@@ -933,17 +972,90 @@ footer {
     }
 }
 
+
+
+
 /*form.html styles*/
 
-.contact-form {
-    display: grid;
-    grid-template-columns: 1fr;
+#form {
     padding: 0 30px 0 30px;
+}
+.contact-form {
+    color: #6b708d;
+}
+#form h1 {
+    font-size: 24px;
+    margin: 24px 0;
+    color: #292e47;
+}
+
+.form-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 
-
-/*input, label {
-    display: block;
+.input-box {
     width: 100%;
-}*/
+    margin-top: 10px;
+    
+}
+
+
+.input-box input {
+    height: 70px;
+    padding: 8px;
+    width: 100%;
+    background-color: rgba(107, 112, 141, 0.1);
+    border: 1px none #000;
+    margin-bottom: 10px;
+}
+
+.label {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 20px;
+    
+}
+
+.message-box input {
+    height: 200px;
+}
+
+input::placeholder {
+    font-size: 17px;
+}
+
+.button-submit {
+    height: 80px;
+}
+
+.button-submit input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: #072ac8;
+    font-size: 17px;
+    color: #fff;
+}
+
+@media (min-width:760px) {
+    .input-box {
+        width: calc(100% / 2 - 10px);
+    }
+
+    .name-box, .message-box {
+        width: 100%;
+    }
+
+    #form {
+        max-width: 1160px;
+        margin: 200px auto 0;
+        padding: 0;
+    }
+    #form h1 {
+        font-size: 60px;
+        margin-bottom: 80px;
+    }
+}

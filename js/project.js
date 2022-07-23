@@ -25,14 +25,14 @@ async function getRecentProject() {
     <p>${description}</p>`;
 }
  
-//display 3 different projects
+//display 3 random projects
 
-//create an array with the first 3 objects
-const projectsArray = [];
+
+  const projectsArray = [];
 async function getOtherProjects() {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
     const finalRes = await res.json();
-    for(let i = 0; i < 3; i++) {
+    for(let i = 0; i < finalRes.length; i++) {
        const title = finalRes[i].title;
        const description = finalRes[i].body;
        projectsArray.push({title: title, text: description});
@@ -40,12 +40,16 @@ async function getOtherProjects() {
    //add image url to array:     
    const response = await fetch("https://jsonplaceholder.typicode.com/photos");
    const finalResponse = await response.json();
-       for (let j=0; j<3;j++) {
-           //doesn't add the new key-value pair :(
+       for (let j=0; j<finalRes.length;j++) {
+           
            projectsArray[j].img = finalResponse[j].url;
        } 
+ 
+    //crear un nuevo array desordenado:
+    const randomProjects = [...projectsArray].sort(() => 0.5 - Math.random());
+    const random3projects = randomProjects.slice(0, 3);   
    //display results in html    
-   projectsArray.forEach(project => {
+   random3projects.forEach(project => {
        otherProjects.innerHTML += `<div class="recent-project-item">
        <img class="recent-project-img" src="${project.img}" alt="">
        <div class="project-item-content">
@@ -56,4 +60,6 @@ async function getOtherProjects() {
    </div>`
        
    })
-  }
+  } 
+
+  

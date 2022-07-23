@@ -22,20 +22,20 @@
                 <a href="#">Services</a>
             </div>
             <div class="acordeon">
-                <a href="#"><img src="images/hero-section/icon-acordeon.png" alt=""></a>
-                <div class="menu">
+                <button #acordeon-btn><img src="images/hero-section/icon-acordeon.png" alt=""></button>
+                
                     <ul class="drop-down">
                         <li>
-                            <a href=".index.html">Home</a> 
+                            <a href=".index.html">
+                            <span class="link">Home</span></a> 
                         </li>
                         <li>
-                            <a href="#">Projects</a>
+                            <a href="#"><span class="link">Projects</span></a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="#"><span class="link">Services</span></a>
                         </li>
-                    </ul>
-                </div>     
+                    </ul>   
             </div>
             <div>
                 <a class="contact" href="form.html">Contact Us</a> 
@@ -47,27 +47,32 @@
         <div Class="contact-form">
             <div class="form-details">
                 <div class="input-box name-box">
+                    <div class="full-name-alert"></div>
                     <label class="label" for="client-name">Full Name*
                     </label>
+                    
                     <input id="name" type="text" placeholder="Enter your full name">
                 </div>
                 <div class="input-box email-box">
+                    <div class="email-alert"></div>
                     <label class="label" for="email" >Email</label> 
                     <input id="email" type="email" placeholder="Enter your email">
                 </div>
                 <div class="input-box phone-box">
+                    <div class="phone-alert"></div>
                     <label class="label" for="phone" >Phone  
                     </label>
-                    <input type="tel" placeholder="Enter your phone">
+                    <input type="tel" id="phone" placeholder="Enter your phone">
                 </div>
                 <div class="input-box message-box">
+                    <div class="message-alert"></div>
                     <label  class="label" for="message">Message*</label>
                     <input id="message" name="message-text" maxlength="5000" type="text-area" rows="8" cols="10" placeholder="Write your message here...">
                 </div>
             </div>
             <div class="button-submit">
                 <label for="submit-btn"></label>
-                <input type="submit">
+                <input class="submit-form-btn" type="submit">
             </div> 
         </div>
     </section>

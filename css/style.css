@@ -76,37 +76,50 @@ a {
     }
     
     .acordeon {
-        display: block;
-        margin-right: -75%;  
+        display: block; 
     }
 
-    .acordeon a {
-        text-decoration: none;
-        display: block;
-    }
 
-    
-    .drop-down {
+    .acordeon button {
+        cursor: pointer;
+        /*transition: 0.5s ease;*/
         position: absolute;
-        width: 100%; /*no hace nada*/
-        display: none;
-        background: rgb(190, 187, 187);
-        left: 0;
-        
+        top: 5px;
+        right: 30px;
+        border: none;
+
     }
 
-    .acordeon:hover .drop-down {
-        display: block;
+    .acordeon button.active {
+        background: #ccc;
+        border: none;
     }
 
     .drop-down li {
-        display: block;
-    
+        list-style: none;
+        padding: 5px 0;
     }
 
-    .acordeon:hover li {
-        padding: 10px;
+    .drop-down {
+        display: none;
+        background: #cccccc;
+        position: absolute;
+        top: 18px;
+        left: 0;
+        right: 0;
     }
+
+
+    .drop-down li a:hover {
+        color: #292e47;
+    }
+
+    
+    .acordeon button.active + ul {
+        display: block;
+    }
+
+    
 
 } /*acaba la @media acordeon*/
  
@@ -152,7 +165,7 @@ a {
     background: none;
     color:  #6B708D;
     font-weight: 600;
-    padding: 15px 30px;/*es distinto :(*/
+    padding: 15px 30px 15px 0;
 }
 
 .get-btn {
@@ -178,6 +191,7 @@ a {
     gap: 1em;
 }
 
+
 /*query para Iphone 12*/
 
 
@@ -197,6 +211,10 @@ a {
         flex-direction: column;
         align-items: center;
     }
+    .see-btn {
+        padding: 15px 30px;
+    }
+    
 }
 
 
@@ -215,15 +233,18 @@ a {
         position: absolute;
         top: 0;
         left: 0;
-        width: 150px;
+        max-width: 250px;
     }
 
     .img-card2 {
         position: absolute;
-        width: 150px;
+        width: 250px;
         bottom: 0;
         right: 0;
     }
+   .left-div {
+    max-width: 700px;
+   }
 }
 
 /*pantalla ancha Hero*/
@@ -237,7 +258,7 @@ a {
         margin-right: auto;
         justify-content: center; /*no va, se centra solo con margin auto*/
         align-items: center;
-        padding: 0;
+        padding: 0 30px;
     }
     
     .hero-title {
@@ -246,6 +267,7 @@ a {
 
     .left-div > p {
         text-align: left;
+        margin-right: 30px;
     }
     .right-div {
         position: relative;
@@ -273,6 +295,12 @@ a {
     .get-btn {
         order: 1;
     }
+
+    .left-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
      
 }
 
@@ -285,15 +313,15 @@ a {
     .img-card1 {
         position: absolute;
         top: 0;
-        left: -10px;
-        max-width: 200px;
+        left: -90px;
+        min-width: 280px;
     }
 
     .img-card2 {
         position: absolute;
-        max-width: 200px;
-        bottom: -10px;
-        right: -10px;
+        min-width: 280px;
+        bottom: -110px;
+        right: -100px;
     }
 }
 
@@ -839,7 +867,7 @@ mas 975: 1 fila*     asi era con grid:/
     
    
 }
-/*meter dentro de la optra*/
+/*meter dentro de la otra*/
 
 @media (min-width: 990px) {
     .cta-section {
@@ -865,9 +893,13 @@ mas 975: 1 fila*     asi era con grid:/
     width: 100px;
     height: 30px;
     margin-bottom: 30px;
-    margin-left: auto; /*no se centra*/
-    margin-right: auto;
     
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer {
@@ -904,6 +936,11 @@ footer {
         margin-top: 200px;
         max-width: 1100px;
         margin: 200px auto 0 auto;
+    }
+    .address {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
     }
 
     .address > p {
@@ -1029,6 +1066,12 @@ input::placeholder {
 
 .button-submit {
     height: 80px;
+    margin-top: 10px;
+}
+
+/*no va el cursor*/
+.submit-form-btn {
+    cursor: pointer;
 }
 
 .button-submit input {
@@ -1039,6 +1082,12 @@ input::placeholder {
     font-size: 17px;
     color: #fff;
 }
+
+.input-box input:focus {
+    outline: none;
+}
+
+
 
 @media (min-width:760px) {
     .input-box {

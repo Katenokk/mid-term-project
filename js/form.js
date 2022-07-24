@@ -112,26 +112,3 @@ async function submitForm() {
     
     
 }
- 
-
-//menu acordeon
-let acordeonBtn = document.querySelector(".acordeon button");
-
-acordeonBtn.addEventListener("click", function() {
-    this.classList.toggle("active");
-})
-
-
-//para que desaparezca cuando cierras
-/*
-window.addEventListener("click", function(event){
-  if(!event.target.matches("button") && !event.target.matches("button span") && !event.target.matches("button span .i")  && !event.target.matches(".dropdown ul li a") && !event.target.matches(".dropdown ul li a span")){
-    var btns  = document.querySelectorAll(".dropdown  button");
-  
-   
-      if(btn.classList.contains("active")){
-        btn.classList.remove("active");
-      }
-    });
-  
-});*/

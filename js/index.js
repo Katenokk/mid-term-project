@@ -89,7 +89,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 
 
 
-
+/*BORRASR!!
 //post del form
 const submitBtn = document.querySelector(".btn-subscribe");
 const validEmail = document.querySelector(".alert");
@@ -127,3 +127,4 @@ async function submitEmail() {
     console.log(res.status)
 }
  
+*/

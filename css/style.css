@@ -13,12 +13,13 @@ body {
 .main-nav {
     display: flex;
     justify-content: space-between;
-    max-width: 1100px; /*MAL!!!!*/
+    align-items: center;
+    max-width: 1100px; 
     margin: 70px auto;
     color: #6B708D;
     font-weight: bold;
 }
-
+ 
 a {
     text-decoration: none;
     color: #6B708D;
@@ -27,8 +28,6 @@ a {
 .circle {
     width: 60px;
     height: 18px;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 .nav-links {
     width: 20rem;
@@ -45,8 +44,6 @@ a {
 .contact {
     text-align: center;
     padding: 1em 3em;
-    /*border-radius: 0;
-    border: none;*/
     background: #072AC8;
     color: #fff;
     cursor: pointer;
@@ -64,7 +61,7 @@ a {
 /*media query acrodeon*/
 @media (max-width: 991px) {
 
-    .nav-links, .contact {
+    .nav-links, .contact-us-btn {
         display: none;
     }
     
@@ -79,15 +76,9 @@ a {
         display: block; 
     }
 
-
     .acordeon button {
         cursor: pointer;
-        /*transition: 0.5s ease;*/
-        position: absolute;
-        top: 5px;
-        right: 30px;
         border: none;
-
     }
 
     .acordeon button.active {
@@ -104,7 +95,7 @@ a {
         display: none;
         background: #cccccc;
         position: absolute;
-        top: 18px;
+        top: 13px;
         left: 0;
         right: 0;
     }
@@ -114,16 +105,13 @@ a {
         color: #292e47;
     }
 
-    
     .acordeon button.active + ul {
         display: block;
     }
 
-    
-
 } /*acaba la @media acordeon*/
  
-
+ 
 /*sección "hero"*/
 
 
@@ -134,7 +122,7 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 3em;
-    padding: 0 30px; /*coge este para todo!!*/
+    padding: 0 30px;
 }
 
 .hero-pic {
@@ -171,8 +159,7 @@ a {
 .get-btn {
     background: #072AC8;
     color: #fff;
-    padding: 15px 30px; /*segun original*/
-    /*padding: 1em 1.2em;*/
+    padding: 15px 30px; 
 }
 
 .get-btn:hover {
@@ -188,7 +175,7 @@ a {
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 1em;
+    gap: 1.5em;
 }
 
 
@@ -242,9 +229,9 @@ a {
         bottom: 0;
         right: 0;
     }
-   .left-div {
-    max-width: 700px;
-   }
+     .left-div {
+        max-width: 700px;
+    }
 }
 
 /*pantalla ancha Hero*/
@@ -256,7 +243,6 @@ a {
         max-width: 1100px;
         margin-left: auto;
         margin-right: auto;
-        justify-content: center; /*no va, se centra solo con margin auto*/
         align-items: center;
         padding: 0 30px;
     }
@@ -308,7 +294,7 @@ a {
 
 @media (min-width: 1150px) {
     .rigth-div {
-        position: relative; /*hay que ponerlo cada vez??*/
+        position: relative; 
     }
     .img-card1 {
         position: absolute;
@@ -329,10 +315,6 @@ a {
 
 /*sección lista de logos*/
 
-/*los logos se ponen en linea a partir de 975px* falta poner un ancho mínimo*/
-
-
-
 
 .logos-list {
     display: grid;
@@ -345,7 +327,7 @@ a {
     
 }
 
-/*hay que poner un ancho fijo de 150px a cada logo*/
+
 .logos-list > * {
     width: 120px;
     height: 96px;
@@ -446,7 +428,7 @@ a {
     cursor: pointer;
 }
 .recent-project-item img {
-    width: 100%; /*tienen distinto ancho*/
+    width: 100%; 
     object-fit: cover;
     height: 240px;
 } 
@@ -470,53 +452,6 @@ a {
     }
 }
 
-
-
-
-/*hasta 745px: una columna
-de 745 a 975: 2 y 1
-mas 975: 1 fila*     asi era con grid:/
-
-
-/*.recent-projects {
-    display: grid;
-    grid-template-areas: 
-        "one"
-        "two"
-        "three";
-    grid-gap: 40px;
-}
-
-.recent-projects:nth-child(1) {
-    grid-area: one;
-}
-
-.recent-projects:nth-child(2) {
-    grid-area: two;
-}
-
-.recent-projects:nth-child(3) {
-    grid-area: three;
-}
-
-@media (min-width: 745px) {
-/*imposible poner margen derecho*/
-/*
-    .recent-projects {
-        grid-template-areas:
-        "one two"
-        "three three";
-        grid-auto-flow: row; 
-      
-    }
-}
-
-@media (min-width: 975px) {
-    .recent-projects {
-        grid-template-areas:
-        "one two three";
-    }
-}*/
 
 
 
@@ -572,12 +507,7 @@ mas 975: 1 fila*     asi era con grid:/
         margin: 200px auto 0 auto;
     }
     .container-testimonial {
-        /*solo tiene un elemento*/
-        display: flex;
-        /*flex-direction: column;*/
-        justify-content: space-around;
-        /*align-items: center;*/
-        /*height: 100%;*/
+        height: 100%;
         height: 622px;
         position: relative; 
     }
@@ -603,11 +533,9 @@ mas 975: 1 fila*     asi era con grid:/
         bottom: auto;
         margin-top: 5%;
         margin-left: 10%;
-        
     }
 
    
-
     .img {
         width: 100%;
     }
@@ -619,7 +547,7 @@ mas 975: 1 fila*     asi era con grid:/
         top: 0%;
         bottom: auto;
         margin-top: 5%;
-        margin-right: 10%;/*no lo coge!!*/
+        margin-right: 10%;
     }
 
     .emoji3 {
@@ -639,7 +567,7 @@ mas 975: 1 fila*     asi era con grid:/
         top: auto;
         left: auto;
         margin-bottom: 5%;
-        margin-right: 10%;/*no lo coge!!*/
+        margin-right: 10%;
     }
 }
 
@@ -691,6 +619,7 @@ mas 975: 1 fila*     asi era con grid:/
 .services-section {
     color: #292e47;
     margin-top: 40px;
+    padding: 0 30px;
 }
 
 .services-section > h2 {
@@ -704,9 +633,7 @@ mas 975: 1 fila*     asi era con grid:/
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     margin-top: 20px;
-    padding: 0 30px;
     gap: 10px;
-
 }
 
 .services {
@@ -715,8 +642,6 @@ mas 975: 1 fila*     asi era con grid:/
     flex-direction: column;
     justify-content: space-between;
     max-width: 340px;
-  
-  
 }
 
 .icon {
@@ -744,6 +669,7 @@ mas 975: 1 fila*     asi era con grid:/
     color: #072ac8;
     font-weight: 500px; /*no lo coge!!!*/
 }
+
 @media (min-width: 770px) {
     .services-container {
         display: grid;
@@ -751,13 +677,11 @@ mas 975: 1 fila*     asi era con grid:/
         grid-template-rows: auto;
         margin-top: 70px;
         padding: 0;
-    
     }
 
     .services-section {
         max-width: 1100px;
         margin: 120px auto 0;
-        /*arreglar padding*/
     }
 
     .services-section > h2 {
@@ -857,7 +781,7 @@ mas 975: 1 fila*     asi era con grid:/
     
    
 }
-/*meter dentro de la otra*/
+
 
 @media (min-width: 990px) {
     .cta-section {
@@ -882,8 +806,7 @@ mas 975: 1 fila*     asi era con grid:/
 .circle-footer > img {
     width: 100px;
     height: 30px;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px; 
 }
 
 .address {
@@ -1064,17 +987,22 @@ footer {
 .message-box input {
     height: 200px;
 }
+/*no funciona!!*/
+#message::placeholder {
+    padding-top: 0;
+}
 
 input::placeholder {
     font-size: 17px;
 }
+
 
 .button-submit {
     height: 80px;
     margin-top: 10px;
 }
 
-/*no va el cursor*/
+
 .submit-form-btn {
     cursor: pointer;
 }

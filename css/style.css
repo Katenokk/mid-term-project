@@ -9,6 +9,10 @@ body {
     background-color: #f2f4fc;
 }
 
+.section {
+    padding: 0 30px;
+}
+
 /*navbar style*/
 .main-nav {
     display: flex;
@@ -24,7 +28,7 @@ a {
     text-decoration: none;
     color: #6B708D;
 }
-/*repasar*/
+
 .circle {
     width: 60px;
     height: 18px;
@@ -122,7 +126,6 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 3em;
-    padding: 0 30px;
 }
 
 .hero-pic {
@@ -208,6 +211,7 @@ a {
 /*aparecen las cards fijas, query solo para las cards*/
 
 @media (min-width: 750px) {
+
     .img-card1, .img-card2 {
         display: block;
     }
@@ -244,7 +248,6 @@ a {
         margin-left: auto;
         margin-right: auto;
         align-items: center;
-        padding: 0 30px;
     }
     
     .hero-title {
@@ -260,8 +263,7 @@ a {
     }
 
     .hero-pic {
-        width: 40vw;
-        /*tiene que encoger!!!*/
+        width: 40vw; 
     }
 
     .img-card1 {
@@ -324,9 +326,8 @@ a {
     grid-column-gap: 50px;
     grid-row-gap: 30px;
     justify-items: center;
-    
 }
-
+ 
 
 .logos-list > * {
     width: 120px;
@@ -354,14 +355,11 @@ a {
     display: none;
 }
 
-
-
 .logos-section {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
-    padding: 0 30px;
 }
 
 
@@ -390,7 +388,7 @@ a {
 */
 
 .projects-section {
-    padding: 30px 30px 0 30px;
+    margin-top: 30px;
 }
 
 .recent-projects {
@@ -423,6 +421,7 @@ a {
     display: block;
     margin: 30px 0;
     font-size: 17px;
+    font-weight: 540;
 }
 .recent-project-item a:hover {
     cursor: pointer;
@@ -464,7 +463,7 @@ a {
     background-position: 0px 0px;
     background-color: #292e47;
     max-width: 1320px;
-    height: 450px; /*???*/
+    height: 450px; 
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -574,9 +573,9 @@ a {
 .testimonial-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    
+    justify-content: space-around;  
 }
+
 .testimonial-title, .testimonial-text {
     text-align: center;
 }
@@ -588,7 +587,6 @@ a {
 .container-testimonial h3 {
     color: #ecf7ff;
     line-height: 150%;
-    
     font-weight: bold;
 }
 
@@ -598,7 +596,7 @@ a {
     line-height: 160%;
     font-weight: 500;
 }
-
+ 
 .client-name {
     color: #a2d6f9;
     font-size: 17px;
@@ -619,7 +617,6 @@ a {
 .services-section {
     color: #292e47;
     margin-top: 40px;
-    padding: 0 30px;
 }
 
 .services-section > h2 {
@@ -663,12 +660,13 @@ a {
     font-size: 17px;
 }
 
-.services a {
+.services >  a {
     font-size: 17px;
     margin: 30px;
     color: #072ac8;
-    font-weight: 500px; /*no lo coge!!!*/
+    font-weight: 600px; /*no lo coge!!!*/
 }
+
 
 @media (min-width: 770px) {
     .services-container {
@@ -704,7 +702,8 @@ a {
     align-items: center;
     height: 500px;
     margin-top: 60px;
-    padding: 30px 30px;
+    padding: 30px;
+    
 }
 
 .cta-section > h1 {
@@ -726,7 +725,6 @@ a {
     height: 80px;
     padding: 8px 0 8px 70px;
     font-size: 17px;
-    /*max-width: 100%; no se hace mas estrecho*/
     width: 100%;
     background-color: #ecf7ff;
     border: 1px solid #cccccc;
@@ -786,7 +784,7 @@ a {
 @media (min-width: 990px) {
     .cta-section {
         max-width: 1320px;
-        padding: 90px 30px;
+        padding-top: 90px;
         margin: 200px auto 0 auto;
     }
     .input-container {
@@ -821,6 +819,7 @@ footer {
     align-items: center; 
     margin-top: 60px;
     padding: 0 30px 100px 30px;
+    padding-bottom: 100px;
 }
 
 .address > p {
@@ -907,7 +906,6 @@ footer {
 }
 
 .other-projects {
-    padding: 0 30px;
     margin-top: 50px;
 }
 
@@ -920,8 +918,7 @@ footer {
         box-shadow: 0 10px 10px 0 rgba(22, 20, 20, 0.5);
     }
 
-    .project > h2 {
-       
+    .project > h2 {  
         font-size: 60px;
     }
 
@@ -933,7 +930,6 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
     }
 }
 
@@ -942,9 +938,6 @@ footer {
 
 /*form.html styles*/
 
-#form {
-    padding: 0 30px;
-}
 .contact-form {
     color: #6b708d;
 }
@@ -963,8 +956,7 @@ footer {
 
 .input-box {
     width: 100%;
-    margin-top: 10px;
-    
+    margin-top: 10px;   
 }
 
 
@@ -988,9 +980,11 @@ footer {
     height: 200px;
 }
 /*no funciona!!*/
-#message::placeholder {
-    padding-top: 0;
-}
+/*#message::placeholder {
+    padding-bottom: 300px;
+    
+}*/
+
 
 input::placeholder {
     font-size: 17px;

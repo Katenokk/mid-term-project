@@ -12,6 +12,7 @@ const messageAlert = document.querySelector(".message-alert");
 
 submitFormBtn.addEventListener("click", isValidForm);
 
+//función que valida todo el formulario:
 function isValidForm() {
     const validName = isValidFullName();
     const validEmail = isValidEmail();
@@ -21,7 +22,8 @@ function isValidForm() {
     
     if(validEmail && validName && validPhone && validMessage) {
         submitForm()
-        /*clean the alerts after entering correct value*/ 
+        alert("Your form has been successfully submitted!");
+        //limpia todas las alertas de los campos que están OK
         if (validName) {
             fullNameAlert.innerHTML = "";
         }
@@ -34,6 +36,7 @@ function isValidForm() {
         if (validMessage) {
             messageAlert.innerHTML = "";
         }
+        
     } 
     
 }
@@ -109,6 +112,4 @@ async function submitForm() {
     const finalRes = await res.json();
     console.log(finalRes);
     console.log(res.status);
-    
-    
 }

@@ -22,24 +22,44 @@ const projectsSection = document.querySelector(".recent-projects");
     const response = await fetch("https://jsonplaceholder.typicode.com/photos");
     const finalResponse = await response.json();
         for (let j=0; j<3;j++) {
-            //doesn't add the new key-value pair :(
+            
             recentProjects[j].img = finalResponse[j].url;
         }
     //display results in html    
     recentProjects.forEach(project => {
         projectsSection.innerHTML += `<div class="recent-project-item">
-        <img class="recent-project-img" src="${project.img}" alt="">
-        <div class="project-item-content">
-            <h4>${project.title}</h4>
-            <p>${project.text}</p>
-            <a href="project.html">Learn more</a>                      
-        </div>
-    </div>`
-        
+         <img class="recent-project-img" src="${project.img}" alt="">
+         <div class="project-item-content">
+             <h4>${project.title}</h4>
+             <p>${project.text}</p>
+             <a href="project.html">Learn more</a>                      
+         </div>
+     </div>`
     })
    }
 
 
+   //hmtl anterior que funiona!!!:
+//    projectsSection.innerHTML += `<div class="recent-project-item">
+//         <img class="recent-project-img" src="" alt="">
+//         <div class="project-item-content">
+//             <h4></h4>
+//             <p></p>
+//             <a href="project.html">Learn more</a>                      
+//         </div>
+//     </div>`
+
+//codigo que intente poner nuevo:
+//     const imageProject = document.querySelectorAll(".recent-project-img");
+//     const titleProject = document.querySelectorAll(".project-item-content h4");
+//     const bodyProject = document.querySelectorAll(".project-item-content p");
+
+//     recentProjects.forEach(project => {
+//         imageProject.forEach(el => el.setAttribute("src", project.img));
+//         titleProject.forEach(el => el.innerHTML = project.title) ;
+//         bodyProject.forEach(el => el.innerHTML = project.text); 
+//     })
+//    }
 
 
 

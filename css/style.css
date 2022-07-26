@@ -13,7 +13,7 @@ body {
     padding: 0 30px;
 }
 
-/*navbar style*/
+/*NAVBAR*/
 .main-nav {
     display: flex;
     justify-content: space-between;
@@ -125,7 +125,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3em;
+    gap: 1.3em;
 }
 
 .hero-pic {
@@ -383,7 +383,7 @@ a {
 
 
 
-/*Projects Section (recent projects)
+/*Projects Section (Recent Projects)
 
 */
 
@@ -630,7 +630,7 @@ a {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     margin-top: 20px;
-    gap: 10px;
+    gap: 25px;
 }
 
 .services {
@@ -698,21 +698,22 @@ a {
     background-color: #ffc600;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 500px;
     margin-top: 60px;
-    padding: 30px;
     
 }
 
 .cta-section > h1 {
     font-size: 30px;
+    color: #292e47;
 }
 
 .cta-section > p {
     font-size: 17px;
     color: #6b708d;
+    margin-bottom: 40px;
 }
 
 .form {
@@ -770,21 +771,18 @@ a {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 8px;
+        gap: 15px;
         min-width: 600px; 
     }
     .input-container {
         width: 66%; 
     }
-    
-   
 }
 
 
 @media (min-width: 990px) {
     .cta-section {
         max-width: 1320px;
-        padding-top: 90px;
         margin: 200px auto 0 auto;
     }
     .input-container {
@@ -933,9 +931,10 @@ footer {
     }
 }
 
-
-
-
+/
+/
+/
+/
 /*form.html styles*/
 
 .contact-form {
@@ -973,21 +972,26 @@ footer {
     margin-bottom: 10px;
     display: block;
     font-size: 20px;
-    
+    color: #6b708d;
 }
 
-.message-box input {
+textarea, textarea:focus {
     height: 200px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: rgba(107, 112, 141, 0.1);
 }
-/*no funciona!!*/
-/*#message::placeholder {
-    padding-bottom: 300px;
-    
-}*/
 
-
+textarea::placeholder {
+    padding: 1em;
+}
 input::placeholder {
     font-size: 17px;
+    padding: 1em;
 }
 
 

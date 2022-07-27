@@ -119,7 +119,7 @@ a {
 /*sección "hero"*/
 
 
-/*por defecto, móvil < 760px*/
+/*por defecto, ancho < 760px*/
 
 #hero {
     display: flex;
@@ -664,7 +664,7 @@ a {
     font-size: 17px;
     margin: 30px;
     color: #072ac8;
-    font-weight: 600px; /*no lo coge!!!*/
+    font-weight: 600px;
 }
 
 
@@ -692,7 +692,7 @@ a {
 }
 
 
-/*Form newsletter*/
+/*Form newsletter "Do you have any questions?*/
 
 .cta-section {
     background-color: #ffc600;
